@@ -5,4 +5,4 @@ class User(AbstractUser):
     image = models.ImageField(upload_to='users_images', null=True,blank=True)
 
     def __str__(self):
-        pass
+        return self.first_name + ' '+ self.last_name +' | '+self.username
